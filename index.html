@@ -107,3 +107,86 @@
 </body>
 </html>
 
+
+
+import React from "react";
+import { Card } from "@/components/ui/card";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-gray-100 text-gray-800 flex">
+      {/* Sidebar */}
+      <aside className="w-64 bg-white shadow-xl p-6 fixed h-full">
+        <div className="flex flex-col items-center">
+          <img
+            src="/profile.jpg"
+            alt="Your Photo"
+            className="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-500"
+          />
+          <h1 className="text-2xl font-bold mb-2">Bouchra El Malki</h1>
+          <div className="flex space-x-4 mt-2">
+            <a href="https://github.com/BouchraMalki125" target="_blank" rel="noopener noreferrer">
+              <FaGithub size={20} className="text-gray-700 hover:text-black" />
+            </a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin size={20} className="text-blue-700 hover:text-blue-900" />
+            </a>
+            <a href="mailto:youremail@example.com">
+              <FaEnvelope size={20} className="text-red-600 hover:text-red-800" />
+            </a>
+          </div>
+        </div>
+
+        <nav className="mt-8 space-y-4 text-lg">
+          <a href="#about" className="block hover:text-blue-600">About</a>
+          <a href="#education" className="block hover:text-blue-600">Education</a>
+          <a href="#experience" className="block hover:text-blue-600">Experience</a>
+          <a href="#projects" className="block hover:text-blue-600">Projects</a>
+          <a href="#contact" className="block hover:text-blue-600">Contact</a>
+        </nav>
+      </aside>
+
+      {/* Main Content */}
+      <main className="ml-64 p-10 w-full space-y-12">
+        <section id="about">
+          <h2 className="text-3xl font-semibold mb-4">About Me</h2>
+          <p className="text-gray-700 leading-relaxed">
+            I'm Bouchra, a future engineer passionate about IT, cryptography, AI, and how tech can change our world.
+          </p>
+        </section>
+
+        <section id="education">
+          <h2 className="text-3xl font-semibold mb-4">Education</h2>
+          <ul className="list-disc list-inside space-y-2">
+            <li>2023–2025: CPGE MP – Maths-Physique, Morocco</li>
+            <li>2021–2023: Baccalauréat Scientifique – Mention Très Bien</li>
+          </ul>
+        </section>
+
+        <section id="experience">
+          <h2 className="text-3xl font-semibold mb-4">Experience</h2>
+          <ul className="list-disc list-inside space-y-2">
+            <li>2025: TIPE project on Cryptography and AI-based attack detection</li>
+            <li>2024: Co-developed a personal website using GitHub and React</li>
+          </ul>
+        </section>
+
+        <section id="projects">
+          <h2 className="text-3xl font-semibold mb-4">Projects</h2>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Portfolio website (React + Tailwind + GitHub Pages)</li>
+            <li>Python-based signal detection & AI classification project</li>
+          </ul>
+        </section>
+
+        <section id="contact">
+          <h2 className="text-3xl font-semibold mb-4">Contact</h2>
+          <p>
+            📧 Email: <a className="text-blue-600" href="mailto:youremail@example.com">youremail@example.com</a>
+          </p>
+        </section>
+      </main>
+    </div>
+  );
+}
