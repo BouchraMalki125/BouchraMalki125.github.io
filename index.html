@@ -4,206 +4,161 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bouchra El Maliki | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* General Reset */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    /* === GLOBAL STYLES === */
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #4e54c8, #8f94fb); /* Purple-Blue gradient */
-      color: #fff;
-      line-height: 1.6;
-    }
-
-    header {
-      text-align: center;
-      padding: 50px 20px 30px;
-      background-color: rgba(0, 0, 0, 0.2);
-    }
-
-    header img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid #fff;
-      margin-bottom: 20px;
-    }
-
-    header h1 {
-      font-size: 2.8em;
-    }
-
-    header p {
-      font-size: 1.2em;
-      opacity: 0.9;
-    }
-
-    nav {
-      margin-top: 20px;
-    }
-
-    nav a {
-      color: #ffd;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #ffd700;
-    }
-
-    section {
-      max-width: 900px;
-      margin: 50px auto;
-      background-color: rgba(255, 255, 255, 0.05);
-      padding: 30px;
-      border-radius: 12px;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    }
-
-    section h2 {
-      font-size: 1.8em;
-      margin-bottom: 15px;
-      border-left: 5px solid #ffd700;
-      padding-left: 15px;
-    }
-
-    .content-block {
-      margin-bottom: 20px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      font-size: 0.9em;
-      background: rgba(0, 0, 0, 0.2);
-      margin-top: 40px;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      display: flex;
     }
 
     a {
-      color: #ffe;
+      text-decoration: none;
+      color: inherit;
     }
 
-    a:hover {
-      color: #ffd700;
+    h2 {
+      color: #1a237e;
     }
 
-    /* Responsive */
-    @media screen and (max-width: 600px) {
-      header h1 {
-        font-size: 2em;
-      }
-      section {
-        margin: 20px;
-        padding: 20px;
-      }
+    /* === SIDEBAR STYLES === */
+    .sidebar {
+      width: 250px;
+      background-color: #1a237e; /* navy blue */
+      color: white;
+      height: 100vh;
+      position: fixed;
+      padding: 30px 20px;
+      box-sizing: border-box;
+    }
+
+    .sidebar img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%; /* image in circle */
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    .sidebar h1 {
+      text-align: center;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .sidebar nav a {
+      display: block;
+      color: #fff;
+      margin: 15px 0;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .sidebar nav a:hover {
+      background-color: #3949ab; /* lighter blue */
+    }
+
+    /* === MAIN CONTENT === */
+    .main {
+      margin-left: 250px; /* space for sidebar */
+      padding: 40px;
+      flex-grow: 1;
+      box-sizing: border-box;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    /* === FOOTER === */
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #888;
+      font-size: 0.9em;
+    }
+
+    /* === LINKS === */
+    a.link {
+      color: #1a237e;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <!-- 👤 Your Profile Picture (change src to your image) -->
-    <img src="your-photo.jpg" alt="Bouchra El Maliki Photo" />
+  <!-- === SIDEBAR === -->
+  <div class="sidebar">
+    <!-- 📸 Ta photo (remplace le lien par ton image) -->
+    <img src="your-photo.jpg" alt="Bouchra's photo">
     <h1>Bouchra El Maliki</h1>
-    <p>Scientific Student | Cryptography & AI Enthusiast | Web Explorer</p>
     <nav>
-      <!-- 🔗 Navigation Links to Sections -->
+      <!-- 🧭 Liens de navigation (modifie les IDs selon les sections) -->
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#education">Education</a>
       <a href="#skills">Skills</a>
       <a href="#certificates">Certificates</a>
-      <a href="#contact">Contact</a>
     </nav>
-  </header>
+  </div>
 
-  <!-- 🧠 ABOUT SECTION -->
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="content-block">
-      <p>Hello! I'm Bouchra, a CPGE MP student passionate about IT, cybersecurity, and artificial intelligence. I love exploring encryption, machine learning, and the intersection of math and computer science. I'm always seeking to innovate and build meaningful tech solutions.</p>
-    </div>
-  </section>
+  <!-- === MAIN CONTENT === -->
+  <div class="main">
 
-  <!-- 💼 EXPERIENCE SECTION -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="content-block">
-      <p><strong>TIPE Project - Cryptography Attack Detection</strong><br>
-      Simulated RSA side-channel attacks and applied AI-based detection. Integrated signal analysis and ML models to demonstrate vulnerabilities.</p>
-    </div>
-    <div class="content-block">
-      <p><strong>Python Developer Intern (Fictional Example)</strong><br>
-      Built interactive tools for analyzing encrypted signals and automated data pipelines for attack simulation (Summer 2024).</p>
-    </div>
-  </section>
+    <!-- 📖 À propos -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! I'm Bouchra, a CPGE MP student passionate about IT, cybersecurity, and artificial intelligence. I'm fascinated by how encryption and machine learning can shape a safer digital world.</p>
+    </section>
 
-  <!-- 🎓 EDUCATION SECTION -->
-  <section id="education">
-    <h2>Education</h2>
-    <div class="content-block">
-      <p><strong>CPGE - Mathématiques et Physique (MP)</strong><br>
-      Lycée d’Excellence, Morocco — 2023–2025</p>
-    </div>
-    <div class="content-block">
-      <p><strong>Baccalauréat Scientifique</strong><br>
-      Mention Très Bien — 2023</p>
-    </div>
-  </section>
-
-  <!-- 💡 SKILLS SECTION -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="content-block">
+    <!-- 💼 Expérience -->
+    <section id="experience">
+      <h2>Experience</h2>
       <ul>
-        <li>Python, Scikit-learn, NumPy, Matplotlib</li>
-        <li>Cryptography Concepts (RSA, AES, Side-channel Attacks)</li>
-        <li>Signal Processing (FFT, Filtering, Sampling)</li>
-        <li>Machine Learning: Classification, Anomaly Detection</li>
-        <li>Web Development (HTML, CSS, JS Basics)</li>
+        <li><strong>2025 TIPE Project:</strong> Detection of cryptographic attacks using Python and machine learning.</li>
+        <li><strong>Signal Analysis:</strong> Used FFT for signal trace visualization in security contexts.</li>
       </ul>
-    </div>
-  </section>
+    </section>
 
-  <!-- 📜 CERTIFICATES SECTION -->
-  <section id="certificates">
-    <h2>Certificates</h2>
-    <div class="content-block">
+    <!-- 🎓 Éducation -->
+    <section id="education">
+      <h2>Education</h2>
+      <p><strong>CPGE MP</strong> – Moroccan Preparatory Classes<br />
+      Focus: Mathematics, Physics, Computer Science</p>
+    </section>
+
+    <!-- 🧠 Compétences -->
+    <section id="skills">
+      <h2>Skills</h2>
       <ul>
-        <li>Python for Everybody – University of Michigan (Coursera)</li>
-        <li>Introduction to Cybersecurity – Cisco Networking Academy</li>
-        <li>Machine Learning – Stanford University (Andrew Ng)</li>
+        <li>Python, Scikit-learn, Matplotlib</li>
+        <li>Cryptography (RSA, AES), Machine Learning</li>
+        <li>Signal Processing (FFT, Filtering)</li>
+        <li>HTML, CSS, GitHub</li>
       </ul>
-    </div>
-  </section>
+    </section>
 
-  <!-- 📬 CONTACT SECTION -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <div class="content-block">
-      <p>Email: <a href="mailto:bouchra.elmaliki@example.com">bouchra.elmaliki@example.com</a></p>
-      <p>GitHub: <a href="https://github.com/BouchraMalki125" target="_blank">github.com/BouchraMalki125</a></p>
-    </div>
-  </section>
+    <!-- 📜 Certificats -->
+    <section id="certificates">
+      <h2>Certificates</h2>
+      <ul>
+        <li>Python for Data Science (Coursera)</li>
+        <li>Cybersecurity Essentials (Cisco)</li>
+        <li>Cryptography I (Stanford - Coursera)</li>
+      </ul>
+    </section>
 
-  <!-- 📌 FOOTER -->
-  <footer>
-    &copy; 2025 Bouchra El Maliki. All rights reserved.
-  </footer>
+    <footer>
+      &copy; 2025 Bouchra El Maliki. All rights reserved.
+    </footer>
 
+  </div>
 </body>
-</html>
-
 </html>
 
 
