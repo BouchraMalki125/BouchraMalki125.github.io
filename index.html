@@ -5,159 +5,177 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bouchra El Maliki | Portfolio</title>
   <style>
-    /* === GLOBAL STYLES === */
-    body {
+    /* Reset + font */
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f9f9f9;
-      color: #333;
+    }
+
+    body {
       display: flex;
+      background-color: #ffffff;
+      color: #333;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    h2 {
-      color: #1a237e;
-    }
-
-    /* === SIDEBAR STYLES === */
-    .sidebar {
-      width: 250px;
-      background-color: #1a237e; /* navy blue */
-      color: white;
-      height: 100vh;
+    /* Sidebar */
+    aside {
       position: fixed;
-      padding: 30px 20px;
-      box-sizing: border-box;
-    }
-
-    .sidebar img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%; /* image in circle */
-      object-fit: cover;
-      display: block;
-      margin: 0 auto 20px;
-    }
-
-    .sidebar h1 {
-      text-align: center;
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
-
-    .sidebar nav a {
-      display: block;
+      width: 250px;
+      height: 100vh;
+      background-color: #0d1b2a; /* navy blue */
       color: #fff;
-      margin: 15px 0;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Profile Picture */
+    .profile-pic {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    /* Name + role */
+    aside h1 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    aside p {
+      font-size: 0.95em;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #cfcfcf;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 10px 0;
       font-weight: bold;
-      padding: 8px 12px;
-      border-radius: 6px;
-      transition: background 0.3s;
+      display: block;
+      transition: color 0.3s ease;
     }
 
-    .sidebar nav a:hover {
-      background-color: #3949ab; /* lighter blue */
+    nav a:hover {
+      color: #ffd700;
     }
 
-    /* === MAIN CONTENT === */
-    .main {
-      margin-left: 250px; /* space for sidebar */
+    /* Main Content */
+    main {
+      margin-left: 250px;
       padding: 40px;
-      flex-grow: 1;
-      box-sizing: border-box;
+      width: calc(100% - 250px);
+      background-color: #f9f9f9;
     }
 
     section {
-      margin-bottom: 60px;
+      background: white;
+      padding: 25px;
+      margin-bottom: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
-    /* === FOOTER === */
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #888;
-      font-size: 0.9em;
+    section h2 {
+      color: #0d1b2a;
+      margin-bottom: 15px;
+      border-left: 5px solid #0d1b2a;
+      padding-left: 10px;
     }
 
-    /* === LINKS === */
-    a.link {
-      color: #1a237e;
-      font-weight: bold;
+    /* Responsive */
+    @media (max-width: 768px) {
+      aside {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 20px;
+      }
+
+      .profile-pic {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 0;
+      }
+
+      main {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- === SIDEBAR === -->
-  <div class="sidebar">
-    <!-- 📸 Ta photo (remplace le lien par ton image) -->
-    <img src="your-photo.jpg" alt="Bouchra's photo">
+  <!-- Sidebar -->
+  <aside>
+    <!-- 🖼️ Profile Picture -->
+    <img src="your-photo.jpg" alt="Bouchra's Profile Picture" class="profile-pic" />
+    
+    <!-- 👩‍🎓 Your Info -->
     <h1>Bouchra El Maliki</h1>
+    <p>CPGE MP Student | Cybersecurity & AI</p>
+
+    <!-- 🔗 Navigation -->
     <nav>
-      <!-- 🧭 Liens de navigation (modifie les IDs selon les sections) -->
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#education">Education</a>
       <a href="#skills">Skills</a>
       <a href="#certificates">Certificates</a>
     </nav>
-  </div>
+  </aside>
 
-  <!-- === MAIN CONTENT === -->
-  <div class="main">
-
-    <!-- 📖 À propos -->
+  <!-- Main Content -->
+  <main>
+    <!-- 🧕 About -->
     <section id="about">
       <h2>About Me</h2>
-      <p>Hello! I'm Bouchra, a CPGE MP student passionate about IT, cybersecurity, and artificial intelligence. I'm fascinated by how encryption and machine learning can shape a safer digital world.</p>
+      <p>Hello! I'm Bouchra, a CPGE MP student passionate about cryptography, AI, and the inner workings of digital security. I enjoy solving complex problems and transforming data into meaningful insights.</p>
     </section>
 
-    <!-- 💼 Expérience -->
+    <!-- 💼 Experience -->
     <section id="experience">
       <h2>Experience</h2>
-      <ul>
-        <li><strong>2025 TIPE Project:</strong> Detection of cryptographic attacks using Python and machine learning.</li>
-        <li><strong>Signal Analysis:</strong> Used FFT for signal trace visualization in security contexts.</li>
-      </ul>
+      <p><strong>Cryptographic Attack Simulation - TIPE 2025:</strong> Simulated RSA side-channel attacks and applied ML detection techniques.</p>
     </section>
 
-    <!-- 🎓 Éducation -->
+    <!-- 🎓 Education -->
     <section id="education">
       <h2>Education</h2>
-      <p><strong>CPGE MP</strong> – Moroccan Preparatory Classes<br />
-      Focus: Mathematics, Physics, Computer Science</p>
+      <p>Second Year CPGE MP, Morocco — 2023-2025<br>Focus on mathematics, physics, programming, and algorithmic reasoning.</p>
     </section>
 
-    <!-- 🧠 Compétences -->
+    <!-- 🛠️ Skills -->
     <section id="skills">
       <h2>Skills</h2>
       <ul>
-        <li>Python, Scikit-learn, Matplotlib</li>
-        <li>Cryptography (RSA, AES), Machine Learning</li>
-        <li>Signal Processing (FFT, Filtering)</li>
+        <li>Python, Scikit-Learn, Numpy, Matplotlib</li>
+        <li>Cryptography (RSA, AES), Signal Analysis (FFT)</li>
+        <li>Machine Learning & Anomaly Detection</li>
         <li>HTML, CSS, GitHub</li>
       </ul>
     </section>
 
-    <!-- 📜 Certificats -->
+    <!-- 📜 Certificates -->
     <section id="certificates">
       <h2>Certificates</h2>
-      <ul>
-        <li>Python for Data Science (Coursera)</li>
-        <li>Cybersecurity Essentials (Cisco)</li>
-        <li>Cryptography I (Stanford - Coursera)</li>
-      </ul>
+      <p><strong>Python for Data Science (Coursera)</strong> – 2024<br><strong>Cybersecurity Fundamentals</strong> – 2023</p>
     </section>
+  </main>
 
-    <footer>
-      &copy; 2025 Bouchra El Maliki. All rights reserved.
-    </footer>
-
-  </div>
 </body>
 </html>
 
