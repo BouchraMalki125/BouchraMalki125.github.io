@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bouchra El Maliki | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    /* General Reset */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -14,122 +15,95 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      display: flex;
-      min-height: 100vh;
-      background: #f9f9f9;
-      color: #333;
-    }
-
-    .sidebar {
-      width: 250px;
-      background: #2c3e50;
+      background: linear-gradient(135deg, #4e54c8, #8f94fb); /* Purple-Blue gradient */
       color: #fff;
-      padding: 40px 20px;
-      position: fixed;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      line-height: 1.6;
     }
 
-    .sidebar img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 3px solid #fff;
+    header {
+      text-align: center;
+      padding: 50px 20px 30px;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    header img {
+      width: 150px;
+      height: 150px;
       object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #fff;
       margin-bottom: 20px;
     }
 
-    .sidebar h1 {
-      font-size: 1.8em;
-      margin-bottom: 10px;
-      text-align: center;
+    header h1 {
+      font-size: 2.8em;
     }
 
-    .sidebar p {
-      font-size: 0.95em;
-      text-align: center;
-      margin-bottom: 20px;
+    header p {
+      font-size: 1.2em;
+      opacity: 0.9;
     }
 
-    .sidebar nav a {
-      color: #ecf0f1;
+    nav {
+      margin-top: 20px;
+    }
+
+    nav a {
+      color: #ffd;
       text-decoration: none;
-      display: block;
-      margin: 10px 0;
-      font-weight: 500;
-      transition: 0.3s;
+      margin: 0 15px;
+      font-weight: 600;
+      transition: color 0.3s ease;
     }
 
-    .sidebar nav a:hover {
-      color: #f1c40f;
-    }
-
-    .main-content {
-      margin-left: 250px;
-      padding: 40px;
-      flex: 1;
+    nav a:hover {
+      color: #ffd700;
     }
 
     section {
-      margin-bottom: 50px;
-      max-width: 800px;
+      max-width: 900px;
+      margin: 50px auto;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 12px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     }
 
-    h2 {
-      color: #2c3e50;
+    section h2 {
+      font-size: 1.8em;
       margin-bottom: 15px;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
+      border-left: 5px solid #ffd700;
+      padding-left: 15px;
     }
 
-    .project {
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    .content-block {
       margin-bottom: 20px;
-    }
-
-    .project h3 {
-      margin-bottom: 10px;
-      color: #2980b9;
     }
 
     footer {
       text-align: center;
+      padding: 30px 20px;
       font-size: 0.9em;
+      background: rgba(0, 0, 0, 0.2);
       margin-top: 40px;
-      color: #888;
     }
 
     a {
-      color: #2980b9;
-      text-decoration: none;
+      color: #ffe;
     }
 
     a:hover {
-      text-decoration: underline;
+      color: #ffd700;
     }
 
-    @media (max-width: 768px) {
-      .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 20px;
+    /* Responsive */
+    @media screen and (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
       }
-
-      .sidebar img {
-        width: 80px;
-        height: 80px;
-      }
-
-      .main-content {
-        margin-left: 0;
+      section {
+        margin: 20px;
         padding: 20px;
       }
     }
@@ -137,46 +111,99 @@
 </head>
 <body>
 
-  <aside class="sidebar">
-    <img src="profile.jpg" alt="Bouchra El Maliki">
+  <header>
+    <!-- 👤 Your Profile Picture (change src to your image) -->
+    <img src="your-photo.jpg" alt="Bouchra El Maliki Photo" />
     <h1>Bouchra El Maliki</h1>
-    <p>Scientific Student | Cryptography & AI Enthusiast</p>
+    <p>Scientific Student | Cryptography & AI Enthusiast | Web Explorer</p>
     <nav>
+      <!-- 🔗 Navigation Links to Sections -->
       <a href="#about">About</a>
-      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#certificates">Certificates</a>
       <a href="#contact">Contact</a>
     </nav>
-  </aside>
+  </header>
 
-  <div class="main-content">
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Hello! I'm Bouchra, a CPGE MP student passionate about IT, cybersecurity, and artificial intelligence. I love learning how things work behind the scenes, especially when it comes to encryption, algorithms, and data transformation.</p>
-    </section>
+  <!-- 🧠 ABOUT SECTION -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="content-block">
+      <p>Hello! I'm Bouchra, a CPGE MP student passionate about IT, cybersecurity, and artificial intelligence. I love exploring encryption, machine learning, and the intersection of math and computer science. I'm always seeking to innovate and build meaningful tech solutions.</p>
+    </div>
+  </section>
 
-    <section id="projects">
-      <h2>My Projects</h2>
-      <div class="project">
-        <h3>Cryptography Attack Detector</h3>
-        <p>Simulated side-channel attacks on RSA using Python and detected anomalies with machine learning techniques. Part of my 2025 TIPE presentation.</p>
-      </div>
-      <div class="project">
-        <h3>FFT Signal Analysis</h3>
-        <p>Used Fast Fourier Transform to analyze and visualize signal traces during cryptographic operations.</p>
-      </div>
-    </section>
+  <!-- 💼 EXPERIENCE SECTION -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="content-block">
+      <p><strong>TIPE Project - Cryptography Attack Detection</strong><br>
+      Simulated RSA side-channel attacks and applied AI-based detection. Integrated signal analysis and ML models to demonstrate vulnerabilities.</p>
+    </div>
+    <div class="content-block">
+      <p><strong>Python Developer Intern (Fictional Example)</strong><br>
+      Built interactive tools for analyzing encrypted signals and automated data pipelines for attack simulation (Summer 2024).</p>
+    </div>
+  </section>
 
-    <section id="contact">
-      <h2>Contact Me</h2>
+  <!-- 🎓 EDUCATION SECTION -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="content-block">
+      <p><strong>CPGE - Mathématiques et Physique (MP)</strong><br>
+      Lycée d’Excellence, Morocco — 2023–2025</p>
+    </div>
+    <div class="content-block">
+      <p><strong>Baccalauréat Scientifique</strong><br>
+      Mention Très Bien — 2023</p>
+    </div>
+  </section>
+
+  <!-- 💡 SKILLS SECTION -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="content-block">
+      <ul>
+        <li>Python, Scikit-learn, NumPy, Matplotlib</li>
+        <li>Cryptography Concepts (RSA, AES, Side-channel Attacks)</li>
+        <li>Signal Processing (FFT, Filtering, Sampling)</li>
+        <li>Machine Learning: Classification, Anomaly Detection</li>
+        <li>Web Development (HTML, CSS, JS Basics)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 📜 CERTIFICATES SECTION -->
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <div class="content-block">
+      <ul>
+        <li>Python for Everybody – University of Michigan (Coursera)</li>
+        <li>Introduction to Cybersecurity – Cisco Networking Academy</li>
+        <li>Machine Learning – Stanford University (Andrew Ng)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 📬 CONTACT SECTION -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="content-block">
       <p>Email: <a href="mailto:bouchra.elmaliki@example.com">bouchra.elmaliki@example.com</a></p>
       <p>GitHub: <a href="https://github.com/BouchraMalki125" target="_blank">github.com/BouchraMalki125</a></p>
-    </section>
+    </div>
+  </section>
 
-    <footer>
-      &copy; 2025 Bouchra El Maliki. All rights reserved.
-    </footer>
-  </div>
+  <!-- 📌 FOOTER -->
+  <footer>
+    &copy; 2025 Bouchra El Maliki. All rights reserved.
+  </footer>
+
 </body>
+</html>
+
 </html>
 
 
