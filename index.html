@@ -1,57 +1,97 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bouchra El Maliki - Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Bouchra El Maliki | Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdfdfd;
+      color: #333;
+    }
+    header {
+      background-color: #1a1a1a;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    nav a {
+      color: #eee;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .project {
+      margin-bottom: 30px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fff;
+    }
+    .project h3 {
+      margin-top: 0;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f0f0f0;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
-  <div class="sidebar">
-    <img src="images/profil.jpg" alt="Photo de Bouchra" class="profile-pic" />
+  <header>
     <h1>Bouchra El Maliki</h1>
-    <p>Étudiante en CPGE | Passionnée par l'IT</p>
+    <p>Scientific Student | Cryptography & AI Enthusiast | Web Explorer</p>
     <nav>
-      <ul>
-        <li><a href="#education">🎓 Éducation</a></li>
-        <li><a href="#experience">💼 Expérience</a></li>
-        <li><a href="#projects">💻 Projets</a></li>
-        <li><a href="#contact">📬 Contact</a></li>
-      </ul>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <div class="social-icons">
-      <a href="https://linkedin.com/in/bouchra" target="_blank">🔗</a>
-      <a href="https://github.com/BouchraMalki125" target="_blank">💻</a>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Bouchra, a CPGE MP student passionate about IT, cybersecurity, and artificial intelligence. I love learning how things work behind the scenes, especially when it comes to encryption, algorithms, and data transformation.</p>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="project">
+      <h3>Cryptography Attack Detector</h3>
+      <p>Simulated side-channel attacks on RSA using Python and detected anomalies with machine learning techniques. Part of my 2025 TIPE presentation.</p>
     </div>
-  </div>
+    <div class="project">
+      <h3>FFT Signal Analysis</h3>
+      <p>Used Fast Fourier Transform to analyze and visualize signal traces during cryptographic operations.</p>
+    </div>
+    <!-- You can add more projects here -->
+  </section>
 
-  <div class="main-content">
-    <section id="education">
-      <h2>🎓 Éducation</h2>
-      <p>2ᵉ année CPGE MP - Passion pour l'informatique et la cryptographie</p>
-    </section>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:bouchra.elmaliki@example.com">bouchra.elmaliki@example.com</a></p>
+    <p>GitHub: <a href="https://github.com/BouchraMalki125" target="_blank">github.com/BouchraMalki125</a></p>
+  </section>
 
-    <section id="experience">
-      <h2>💼 Expérience</h2>
-      <p>Projets académiques et personnels en Python, Machine Learning et Cybersécurité</p>
-    </section>
-
-    <section id="projects">
-      <h2>💻 Projets</h2>
-      <ul>
-        <li>Détection d’attaques par IA sur des signaux cryptographiques</li>
-        <li>Simulation de chiffrement RSA</li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2>📬 Contact</h2>
-      <p>Email : bouchra@example.com</p>
-    </section>
-  </div>
+  <footer>
+    &copy; 2025 Bouchra El Maliki. All rights reserved.
+  </footer>
 </body>
 </html>
 
