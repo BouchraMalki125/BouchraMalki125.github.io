@@ -1,111 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bouchra El Maliki | Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f4f9;
-      color: #333;
-    }
-    header {
-      background: #4f46e5;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 1rem;
-    }
-    nav a {
-      text-decoration: none;
-      color: #4f46e5;
-      font-weight: bold;
-    }
-    section {
-      padding: 3rem 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #4f46e5;
-      margin-bottom: 1rem;
-    }
-    .card {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #e0e7ff;
-      color: #333;
-    }
-  </style>
+  <title>Bouchra El Maliki - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <div class="sidebar">
+    <img src="images/profil.jpg" alt="Photo de Bouchra" class="profile-pic" />
     <h1>Bouchra El Maliki</h1>
-    <p>Curious. Scientific. Passionate about IT & Innovation.</p>
+    <p>Étudiante en CPGE | Passionnée par l'IT</p>
     <nav>
-      <a href="#education">Education</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <ul>
+        <li><a href="#education">🎓 Éducation</a></li>
+        <li><a href="#experience">💼 Expérience</a></li>
+        <li><a href="#projects">💻 Projets</a></li>
+        <li><a href="#contact">📬 Contact</a></li>
+      </ul>
     </nav>
-  </header>
-
-  <section id="education">
-    <h2>🎓 Education</h2>
-    <div class="card">
-      <h3>CPGE MP – Classe Préparatoire Maths-Physique</h3>
-      <p>Lycée ... – 2023-2025</p>
-      <p>Focus on Mathematics, Physics, Computer Science. Preparing for CNC.</p>
+    <div class="social-icons">
+      <a href="https://linkedin.com/in/bouchra" target="_blank">🔗</a>
+      <a href="https://github.com/BouchraMalki125" target="_blank">💻</a>
     </div>
-  </section>
+  </div>
 
-  <section id="experience">
-    <h2>💼 Experience</h2>
-    <div class="card">
-      <h3>Cybersecurity & Cryptography Projects</h3>
-      <p>Studied attack detection using machine learning & Python simulations.</p>
-    </div>
-  </section>
+  <div class="main-content">
+    <section id="education">
+      <h2>🎓 Éducation</h2>
+      <p>2ᵉ année CPGE MP - Passion pour l'informatique et la cryptographie</p>
+    </section>
 
-  <section id="projects">
-    <h2>💡 Projects</h2>
-    <div class="card">
-      <h3>TIPE 2025 – Vers une Cryptographie Intelligente</h3>
-      <p>Linked cryptography & AI with real-time attack detection using FFT + classifiers.</p>
-    </div>
-    <div class="card">
-      <h3>Signal Processing & Fourier Transform</h3>
-      <p>Simulated noise-filtering on encrypted signals and plotted results with matplotlib.</p>
-    </div>
-  </section>
+    <section id="experience">
+      <h2>💼 Expérience</h2>
+      <p>Projets académiques et personnels en Python, Machine Learning et Cybersécurité</p>
+    </section>
 
-  <section id="contact">
-    <h2>📬 Contact</h2>
-    <div class="card">
-      <p>Email: <a href="mailto:bouchra@example.com">bouchra@example.com</a></p>
-      <p>GitHub: <a href="https://github.com/BouchraMalki125" target="_blank">BouchraMalki125</a></p>
-    </div>
-  </section>
+    <section id="projects">
+      <h2>💻 Projets</h2>
+      <ul>
+        <li>Détection d’attaques par IA sur des signaux cryptographiques</li>
+        <li>Simulation de chiffrement RSA</li>
+      </ul>
+    </section>
 
-  <footer>
-    &copy; 2025 Bouchra El Maliki. All rights reserved.
-  </footer>
+    <section id="contact">
+      <h2>📬 Contact</h2>
+      <p>Email : bouchra@example.com</p>
+    </section>
+  </div>
 </body>
 </html>
+
 
 
 
